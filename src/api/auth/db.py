@@ -9,7 +9,7 @@ from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
 from sqlalchemy.orm import sessionmaker
 
 from config import settings
-from db.models.models import role
+from src.db.models.models import role
 
 DATABASE_URL = str(settings.infrastructure.postgres_dsn)
 Base: DeclarativeMeta = declarative_base()

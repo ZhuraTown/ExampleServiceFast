@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from api.auth.controller import fastapi_users_routers
+from src.api.auth.controller import fastapi_users_routers
 
 ROUTERS = []
 AUTH_ROUTERS = fastapi_users_routers

@@ -6,7 +6,7 @@ def main():
     # app_logger.info("FastAPI starting...")
     print("FastAPI starting...")
     uvicorn.run(
-        'api.main:app',
+        'src.api.main:app',
         host=api_settings.HOST,
         port=api_settings.PORT,
         reload=api_settings.RELOAD,
