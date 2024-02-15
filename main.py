@@ -1,16 +1,20 @@
-# This is a sample Python script.
-
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+import uvicorn
+from config import api_settings
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def main():
+    # app_logger.info("FastAPI starting...")
+    print("FastAPI starting...")
+    uvicorn.run(
+        'api.main:app',
+        host=api_settings.HOST,
+        port=api_settings.PORT,
+        reload=api_settings.RELOAD,
+        workers=api_settings.WORKERS,
+        log_level='debug',
+    )
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
+    print("FastAPI ending...")
