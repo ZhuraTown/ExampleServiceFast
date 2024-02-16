@@ -52,3 +52,6 @@ Thumbs.db
 .idea
 .env
 /.env
+
+/emil_tasks
+/leet_code
